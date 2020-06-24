@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <DirectPay_DirectPay>
+            <active>true</active>
+            <codePool>local</codePool>
+        </DirectPay_DirectPay>
+    </modules>
+</config>

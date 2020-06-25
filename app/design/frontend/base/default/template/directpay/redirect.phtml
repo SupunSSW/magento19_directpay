@@ -76,10 +76,6 @@ $cancelUrl = $base_url . "directpay/payment/cancel";
 $reponseUrl = $success_url;
 
 //data string concat order
-// $dataString = $merchant . $amount . $currency . $pluginName . $pluginVersion . $returnUrl . $cancelUrl . $orderId . $reference . $firstName . $lastName . $email . $description . $apiKey.$reponseUrl;
-
-
-//data string concat order
 $dataString = $merchant_id .
     $amount .
     $currency .
@@ -100,10 +96,6 @@ $dataString = $merchant_id .
 $signature = null;
 
 $pkeyid = openssl_pkey_get_private($privateKey);
-
-// $pkeyid = openssl_pkey_get_private($privateKey);
-// $signResult = openssl_sign($dataString, $signature, $pkeyid);
-
 
 //Generate signature
 $signResult = openssl_sign($dataString, $signature, $pkeyid, OPENSSL_ALGO_SHA256);

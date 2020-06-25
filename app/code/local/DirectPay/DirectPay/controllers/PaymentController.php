@@ -44,17 +44,9 @@ class DirectPay_DirectPay_PaymentController extends Mage_Core_Controller_Front_A
 
             }
 
-            Mage::log($this->urlw);
-            // Mage::getSingleton('checkout/session')->unsQuoteId();
-            // Mage_Core_Controller_Varien_Action::_redirect($this->urlw, array('_secure'=> false));
         }
 
-        // Mage::log("ff");
-        // Mage::log($this->urlw);
-        // Mage::log($this->getRequest()->getMethod());
-
         $status = $this->getRequest()->get('status');
-        // $url = null;
 
         if ($status == 'SUCCESS') {
             Mage::getSingleton('checkout/session')->unsQuoteId();
@@ -64,8 +56,6 @@ class DirectPay_DirectPay_PaymentController extends Mage_Core_Controller_Front_A
             Mage_Core_Controller_Varien_Action::_redirect("checkout/onepage/failure", array('_secure' => false));
         }
 
-
-        // Mage::log($this->getRequest());
     }
 
     // The cancel action is triggered when an order is to be cancelled

@@ -1,4 +1,4 @@
-# Magento19 DirectPay Plugin
+# Magento1.9 DirectPay Plugin
 Magento version 1.9 plugin for DirectPay payment method
 
 
